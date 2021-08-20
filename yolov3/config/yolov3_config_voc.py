@@ -21,13 +21,22 @@ DATA = {"CLASSES": ['point'],
 #         "ANCHORS_PER_SCLAE": 3
 #         }
 
-# MODEL for V10
-MODEL = {"ANCHORS": [[(6.6414, 6.8018), (9.8782, 6.1234), (6.5990, 13.4083)],  # Anchors for small obj
-                     [(13.3982, 6.5994), (6.7748, 12.1692), (10.3516, 8.8825)],  # Anchors for medium obj
-                     [(9.8590, 12.6997), (13.4188, 10.1027), (13.2853, 13.2730)]],  # Anchors for big obj
+# MODEL for V11
+#MODEL = {"ANCHORS": [[(3.6319, 3.2745), (3.6606, 4.7699), (3.9423, 6.5241)],  # Anchors for small obj
+#                     [(5.5596, 4.0878), (5.5918, 6.3293), (7.3806, 4.3591)],  # Anchors for medium obj
+#                     [(4.9880, 8.0489), (7.3333, 6.0576), (7.6158, 7.6705)]],  # Anchors for big obj
+#         "STRIDES": [8, 16, 32],
+#         "ANCHORS_PER_SCLAE": 3
+#         }
+
+#Model for Final
+MODEL = {"ANCHORS": [[(4.4833, 4.6323), (5.1899, 6.9693), (6.6161, 5.2267)],  # Anchors for small obj
+                     [(5.3304, 9.6980), (9.1278, 5.1023), (7.7567, 7.5340)],  # Anchors for medium obj
+                     [((7.8473, 9.8834)), (10.4862, 6.7193), (10.3803, 9.8862)]],  # Anchors for big obj
          "STRIDES": [8, 16, 32],
          "ANCHORS_PER_SCLAE": 3
          }
+
 
 # train
 TRAIN = {
@@ -36,19 +45,19 @@ TRAIN = {
     "BATCH_SIZE": 2,
     "MULTI_SCALE_TRAIN": True,
     "IOU_THRESHOLD_LOSS": 0.5,
-    "EPOCHS": 100,
+    "EPOCHS": 50,
     "NUMBER_WORKERS": 1,
     "MOMENTUM": 0.9,
     "WEIGHT_DECAY": 0.0005,
     "LR_INIT": 1e-4,
-    "LR_END": 1e-6,
+    "LR_END": 1e-7,
     "WARMUP_EPOCHS": 2  # or None
 }
 
 # test
 TEST = {
     "TEST_IMG_SIZE": 128,
-    "BATCH_SIZE": 2,
+    "BATCH_SIZE": 1,
     "NUMBER_WORKERS": 0,
     "CONF_THRESH": 0.01,
     "NMS_THRESH": 0.5,
