@@ -43,7 +43,7 @@ TRAIN = {
     "TRAIN_IMG_SIZE": 128,
     "AUGMENT": True,
     "BATCH_SIZE": 2,
-    "MULTI_SCALE_TRAIN": True,
+    "MULTI_SCALE_TRAIN": False,
     "IOU_THRESHOLD_LOSS": 0.5,
     "EPOCHS": 50,
     "NUMBER_WORKERS": 1,
