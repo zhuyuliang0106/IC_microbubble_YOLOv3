@@ -1,3 +1,5 @@
+# this file is used to extract the microbbule with its corresponding boundingbox, into many extracted single microbubble
+
 import os
 import re
 import matplotlib.pyplot as plt
