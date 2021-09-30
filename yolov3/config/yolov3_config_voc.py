@@ -3,6 +3,7 @@
 DATA_PATH = r"F:\0Fcode\code0711_yolo\VOC2007"
 #PROJECT_PATH = r"F:\0Fcode\code0727_det\yolov3"
 PROJECT_PATH = r"D:\IC\BioMedical\Individual Project\Code\Pytorch_yolov3\yolov3\yolov3"
+# PROJECT_PATH is where your whole file of the network is.
 
 # DATA = {"CLASSES":['aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus',
 #            'car', 'cat', 'chair', 'cow', 'diningtable', 'dog', 'horse',
@@ -10,26 +11,12 @@ PROJECT_PATH = r"D:\IC\BioMedical\Individual Project\Code\Pytorch_yolov3\yolov3\
 #            'train', 'tvmonitor'],
 #         "NUM":20}
 
+#In this project, only one classify, that is microbubble, thus only one.
 DATA = {"CLASSES": ['point'],
         "NUM": 1}
 
-# model
-#MODEL = {"ANCHORS": [[(1.25, 1.625), (2.0, 3.75), (4.125, 2.875)],  # Anchors for small obj
-#                     [(1.875, 3.8125), (3.875, 2.8125), (3.6875, 7.4375)],  # Anchors for medium obj
-#                     [(3.625, 2.8125), (4.875, 6.1875), (11.65625, 10.1875)]],  # Anchors for big obj
-#         "STRIDES": [8, 16, 32],
-#         "ANCHORS_PER_SCLAE": 3
-#         }
 
-# MODEL for V11
-#MODEL = {"ANCHORS": [[(3.6319, 3.2745), (3.6606, 4.7699), (3.9423, 6.5241)],  # Anchors for small obj
-#                     [(5.5596, 4.0878), (5.5918, 6.3293), (7.3806, 4.3591)],  # Anchors for medium obj
-#                     [(4.9880, 8.0489), (7.3333, 6.0576), (7.6158, 7.6705)]],  # Anchors for big obj
-#         "STRIDES": [8, 16, 32],
-#         "ANCHORS_PER_SCLAE": 3
-#         }
-
-#Model for Final
+#This is the dimension of the anchor box, you need to know what is the anchor box in YOLOv3 first.
 MODEL = {"ANCHORS": [[(4.4833, 4.6323), (5.1899, 6.9693), (6.6161, 5.2267)],  # Anchors for small obj
                      [(5.3304, 9.6980), (9.1278, 5.1023), (7.7567, 7.5340)],  # Anchors for medium obj
                      [((7.8473, 9.8834)), (10.4862, 6.7193), (10.3803, 9.8862)]],  # Anchors for big obj
@@ -64,3 +51,8 @@ TEST = {
     "MULTI_SCALE_TEST": False,
     "FLIP_TEST": False
 }
+
+# some tips
+# your IMG_SIZE should be same as your input image.
+# don't use 'multi_scale_trian'. If you change the code in the training, you can use this function.
+# BATCH_SIZE should be fitted to your GPU and the training datasets.
