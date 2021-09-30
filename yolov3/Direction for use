@@ -1,0 +1,19 @@
+# Prepare work 1: create folders
+# step 1: first you need to create a folder named 'dataset', including two sub-folders 'dataset/CEUS'(input image) and 'dataset/Label_location'(label in txt.)
+# step 2: Second you need to create a folder named 'data', including three sub-folders 'data/result'(output from network), 'data/test'(test datasets), 'data/train'(training dataset). 
+# step 2 continue: and create two txt named 'data/test_annotation' and 'data/train_annotation' to record the information of the train test dataset.
+
+###########################
+
+# Prepare work 2: How to use the network?
+# step 1:First you need to prepare your training datasets(sythetic datasets), put the input image into 'dataset/CEUS' and put the label into 'dataset/Label_location'
+# step 2:After finishing the dataset creation, you need to excute the file 'yolov3/gen_data.py', this file will generatetraining dataset and test dataset.
+# step 3: then excute the file 'yolov3/cp_data.py', this file will split the dataset into training dataset and test dataset.
+
+
+###########################
+
+# prepare work 3: set the configuration for the network
+# step 1: 'yolov3/config' is a vital file, it sets the important parameters of the network and training, the specific description will be in that file.
+# step 2: after the config setting, you need to check your train.py, too see if each parameter setting is fit your requirenment.
+# step 3: check the parameter setting in the test.py, the final result will be in file 'data/result'
