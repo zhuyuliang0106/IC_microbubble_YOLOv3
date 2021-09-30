@@ -7,7 +7,7 @@
 
 # Prepare work 2: How to use the network?
 # step 1:First you need to prepare your training datasets(sythetic datasets), put the input image into 'dataset/CEUS' and put the label into 'dataset/Label_location'
-# step 2:After finishing the dataset creation, you need to excute the file 'yolov3/gen_data.py', this file will generatetraining dataset and test dataset.
+# step 2:After finishing the dataset creation, you need to execute the file 'yolov3/gen_data.py', this file will generatetraining dataset and test dataset.
 # step 3: then excute the file 'yolov3/cp_data.py', this file will split the dataset into training dataset and test dataset.
 
 
@@ -17,3 +17,12 @@
 # step 1: 'yolov3/config' is a vital file, it sets the important parameters of the network and training, the specific description will be in that file.
 # step 2: after the config setting, you need to check your train.py, too see if each parameter setting is fit your requirenment.
 # step 3: check the parameter setting in the test.py, the final result will be in file 'data/result'
+# step 4: calculate the dimension of the anchor box using file 'Anchor box'(python), and set the parameters of the anchor box in config.py
+
+###########################
+
+# After training
+# step 1: execute the 'trian.py' then after the training, execute the 'test.py'.
+# step 2: once you are statisfied with your result, execute the file 'extraction' (python), extracting the bubble in each box for the following location.
+# step 3: the work above all work in python(Pycharm), the following work are in MATLAB.
+# step 4: using the file in 'calc_centroid' to calculate the final centroid. before this, you need to create some folders and put the files(you want to test) into these folders.
